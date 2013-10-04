@@ -9,16 +9,12 @@ namespace NumberGuessingGame
     {
         static void Main(string[] args)
         {
-            int guesses = 7;
-            int number;
-            
             {
-                for(int i = 1; i < 100; i++);
+                for (int i = 1; i < 100; i++);
             }
-            
                 string input = Console.ReadLine();
                 Console.WriteLine("I'm thinking of a number between 1 and 100");
-
+                Console.WriteLine("Is it ");
         }
     }
 }
