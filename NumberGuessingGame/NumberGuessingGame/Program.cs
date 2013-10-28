@@ -9,33 +9,43 @@ namespace NumberGuessingGame
     {
         static void Main(string[] args)
         {
-            int number;
-            int guess;
-            {
-                for (int i = 1; i < 100; i++);
-            }
-                Console.WriteLine("I'm thinking of a number between 1 and 100. What is it?");
+            int tries = 0;
+            int h = 100;
+            int l = 0;
+
+
+                Console.WriteLine("Think of a number between 1 and 100. Is it...?");
                 string input = Console.ReadLine(); // Accept a string from the user
-                string input.ToInt32 = guess;
+                    
 
                 // if (input == "y")
                 // {
                 // do something
                 // }
 
-                if (guess < number)
+                if (input == "H")
                 {
-                    Console.WriteLine("H");
+                    
+                }
+                
+                if(input == "L")
+                {
+                    
+                }
+                
+                if (input == "E")
+                {
+                    Console.WriteLine("That is the Number!");
+                }
+        
+                if (tries <= 7)
+                {
+                    Console.WriteLine("You win");
                 }
 
-                if (guess > number)
+                if (tries > 7)
                 {
-                    Console.WriteLine("L");
-                }
-
-                if (guess == number)
-                {
-                    Console.WriteLine("E");
+                    Console.WriteLine("You lose");
                 }
         }
     }
