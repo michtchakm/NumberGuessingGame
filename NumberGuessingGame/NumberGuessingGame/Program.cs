@@ -9,44 +9,38 @@ namespace NumberGuessingGame
     {
         static void Main(string[] args)
         {
-            int tries = 0;
-            int h = 100;
-            int l = 0;
+            string input;
+            int low = 0;
+            int high = 100;
+            int guess;
+            int count = 0;
 
+            while(true)
+            {
+                guess = (low + high) / 2;
+                Console.Write("Your guess is " + guess);
+                input = Console.ReadLine();
+                if(input == "h")
+                {
+                    low = guess + 1;
+                    count = count + 1;
+                }
+                else if (input == "l")
+                {
+                    high = guess - 1;
+                    count = count + 1;
+                }
+                else if (input == "e")
+                {
+                    count = count + 1;
+                    break;
+                }
+            }
 
-                Console.WriteLine("Think of a number between 1 and 100. Is it...?");
-                string input = Console.ReadLine(); // Accept a string from the user
-                    
-
-                // if (input == "y")
-                // {
-                // do something
-                // }
-
-                if (input == "H")
-                {
-                    
-                }
-                
-                if(input == "L")
-                {
-                    
-                }
-                
-                if (input == "E")
-                {
-                    Console.WriteLine("That is the Number!");
-                }
-        
-                if (tries <= 7)
-                {
-                    Console.WriteLine("You win");
-                }
-
-                if (tries > 7)
-                {
-                    Console.WriteLine("You lose");
-                }
+            if (count == 8)
+            {
+                Console.WriteLine("You lose (Went past maximum amount of guesses)");
+            }
         }
     }
 }
